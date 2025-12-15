@@ -99,116 +99,116 @@ export default function Contact() {
               action="https://formspree.io/f/xpwvnjzz"
               method="POST"
               className="space-y-5"
+>
+          {/* Vorname / Nachname */}
+          <div className="grid md:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Vorname *
+              </label>
+              <input
+                type="text"
+                name="vorname"
+                placeholder="Ihr Vorname"
+                required
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-iconBlue"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Nachname *
+              </label>
+              <input
+                type="text"
+                name="nachname"
+                placeholder="Ihr Nachname"
+                required
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-iconBlue"
+              />
+            </div>
+          </div>
+
+          {/* E-Mail / Telefon */}
+          <div className="grid md:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                E-Mail *
+              </label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Ihre E-Mail-Adresse"
+                required
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-iconBlue"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Telefon *
+              </label>
+              <input
+                type="tel"
+                name="telefon"
+                placeholder="Ihre Telefonnummer"
+                required
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-iconBlue"
+              />
+            </div>
+          </div>
+
+          {/* Art des Gutachtens */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Art des Gutachtens *
+            </label>
+            <select
+              name="gutachten"
+              required
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 bg-white focus:ring-2 focus:ring-iconBlue"
             >
-              {/* Vorname / Nachname */}
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Vorname *
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-iconBlue focus:border-iconBlue"
-                    placeholder="Ihr Vorname"
-                    required
-                  />
-                </div>
-        
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Nachname *
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-iconBlue focus:border-iconBlue"
-                    placeholder="Ihr Nachname"
-                    required
-                  />
-                </div>
-              </div>
+              <option value="unfall">Unfallgutachten</option>
+              <option value="wert">Wertgutachten</option>
+              <option value="schaden">Schadengutachten</option>
+              <option value="sonstiges">Sonstiges</option>
+            </select>
+          </div>
 
-              {/* E-Mail / Telefon */}
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    E-Mail *
-                  </label>
-                  <input
-                    type="email"
-                    className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-iconBlue focus:border-iconBlue"
-                    placeholder="Ihre E-Mail-Adresse"
-                    required
-                  />
-                </div>
+          {/* Nachricht */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Nachricht *
+            </label>
+            <textarea
+              name="message"
+              placeholder="Bitte beschreiben Sie kurz Ihr Anliegen..."
+              required
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 h-28 resize-none focus:ring-2 focus:ring-iconBlue"
+            />
+          </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Telefon *
-                  </label>
-                  <input
-                    type="tel"
-                    className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-iconBlue focus:border-iconBlue"
-                    placeholder="Ihre Telefonnummer"
-                    required
-                  />
-                </div>
-              </div>
+          {/* Datenschutz */}
+          <div className="flex items-start gap-2 text-sm text-gray-600">
+            <input type="checkbox" required />
+            <span>
+              Ich stimme der Verarbeitung meiner Daten gemäß der Datenschutzerklärung zu.
+            </span>
+          </div>
 
-              {/* Art des Gutachtens */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Art des Gutachtens *
-                </label>
-                <select
-                  className="w-full border border-gray-300 rounded-lg px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-iconBlue focus:border-iconBlue"
-                  defaultValue="unfall"
-                  required
-                >
-                  <option value="unfall">Unfallgutachten</option>
-                  <option value="wert">Wertgutachten</option>
-                  <option value="schaden">Schadengutachten</option>
-                  <option value="sonstiges">Sonstiges</option>
-                </select>
-              </div>
+          {/* Button */}
+          <button
+            type="submit"
+            className="w-full bg-iconBlue text-white font-semibold py-3 rounded-lg hover:bg-heroBg transition"
+          >
+            Anfrage absenden
+          </button>
 
-              {/* Nachricht */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Nachricht *
-                </label>
-                <textarea
-                  className="w-full border border-gray-300 rounded-lg px-3 py-2 h-28 resize-none focus:outline-none focus:ring-2 focus:ring-iconBlue focus:border-iconBlue"
-                  placeholder="Bitte beschreiben Sie kurz Ihr Anliegen..."
-                  required
-                ></textarea>
-              </div>
+          <p className="text-xs text-gray-500 text-center">
+            * Pflichtfelder – Wir melden uns in der Regel innerhalb von 2 Stunden.
+          </p>
+        </form>
 
-              {/* Checkbox */}
-              <div className="flex items-start gap-2 text-sm text-gray-600">
-                <input
-                  id="privacy"
-                  type="checkbox"
-                  className="mt-1 w-4 h-4 border-gray-300 rounded"
-                  required
-                />
-                <label htmlFor="privacy">
-                  Ich stimme der Verarbeitung meiner Daten gemäß der
-                  Datenschutzerklärung zu. *
-                </label>
-              </div>
-
-              {/* Button */}
-              <button
-                type="submit"
-                className="w-full mt-2 bg-iconBlue text-white font-semibold py-3 rounded-lg hover:bg-heroBg transition"
-              >
-                Anfrage absenden
-              </button>
-
-              <p className="text-xs text-gray-500 mt-2 text-center">
-                * Pflichtfelder – Wir melden uns in der Regel innerhalb von 2&nbsp;Stunden bei Ihnen.
-              </p>
-            </form>
           </div>
         </div>
 
