@@ -1,22 +1,24 @@
-import Hero from "./components/Hero";
-import Services from "./components/Services";
-import Certificates from "./components/Certificates";
-import Examples from "./components/Examples";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import Home from "./pages/Home";
+import Datenschutz from "./pages/Datenschutz";
+import Impressum from "./pages/Impressum";
+import AGB from "./pages/AGB";
+import UeberUns from "./pages/UeberUns";
+import Zertifikate from "./pages/Zertifikate";
 
 function App() {
   return (
-    <>
-      <Hero />
-      <Services />
-      <Certificates />
-      <Examples />
-      <Contact />
-      <Footer />
-     
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/datenschutz" element={<Datenschutz />} />
+        <Route path="/impressum" element={<Impressum />} />
+        <Route path="/agb" element={<AGB />} />
+        <Route path="/ueber-uns" element={<UeberUns />} />
+        <Route path="/zertifikate" element={<Zertifikate />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
