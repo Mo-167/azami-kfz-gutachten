@@ -108,7 +108,7 @@ export default function Contact() {
               </label>
               <input
                 type="text"
-                name="vorname"
+                name="Vorname"
                 placeholder="Ihr Vorname"
                 required
                 className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-iconBlue"
@@ -121,7 +121,7 @@ export default function Contact() {
               </label>
               <input
                 type="text"
-                name="nachname"
+                name="Nachname"
                 placeholder="Ihr Nachname"
                 required
                 className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-iconBlue"
@@ -137,7 +137,7 @@ export default function Contact() {
               </label>
               <input
                 type="email"
-                name="email"
+                name="Email"
                 placeholder="Ihre E-Mail-Adresse"
                 required
                 className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-iconBlue"
@@ -150,7 +150,7 @@ export default function Contact() {
               </label>
               <input
                 type="tel"
-                name="telefon"
+                name="Telefon"
                 placeholder="Ihre Telefonnummer"
                 required
                 className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-iconBlue"
@@ -164,14 +164,14 @@ export default function Contact() {
               Art des Gutachtens *
             </label>
             <select
-              name="gutachten"
+              name="Gutachten"
               required
               className="w-full border border-gray-300 rounded-lg px-3 py-2 bg-white focus:ring-2 focus:ring-iconBlue"
             >
-              <option value="unfall">Unfallgutachten</option>
-              <option value="wert">Wertgutachten</option>
-              <option value="schaden">Schadengutachten</option>
-              <option value="sonstiges">Sonstiges</option>
+              <option value="Unfallgutachten">Unfallgutachten</option>
+              <option value="Wertgutachten">Wertgutachten</option>
+              <option value="Schadengutachten">Schadengutachten</option>
+              <option value="Sonstiges">Sonstiges</option>
             </select>
           </div>
 
@@ -181,7 +181,7 @@ export default function Contact() {
               Nachricht *
             </label>
             <textarea
-              name="message"
+              name="Message"
               placeholder="Bitte beschreiben Sie kurz Ihr Anliegen..."
               required
               className="w-full border border-gray-300 rounded-lg px-3 py-2 h-28 resize-none focus:ring-2 focus:ring-iconBlue"
