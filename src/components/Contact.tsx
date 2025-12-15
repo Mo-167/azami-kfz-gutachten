@@ -38,7 +38,7 @@ export default function Contact() {
                   </p>
                 </div>
               </div>
-
+    
               {/* E-Mail */}
               <div className="flex gap-4">
                 <div className="mt-1">
@@ -61,7 +61,7 @@ export default function Contact() {
                 <div>
                   <p className="font-semibold">Standort</p>
                   <p className="text-gray-200">
-                    München, Frankfurt am Main &amp; Hannover
+                    München &amp; Hannover
                   </p>
                   <p className="text-xs text-gray-400 mt-1">
                     Mobil im gesamten Umkreis verfügbar
@@ -113,7 +113,7 @@ export default function Contact() {
                     required
                   />
                 </div>
-
+        
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
                     Nachname *
