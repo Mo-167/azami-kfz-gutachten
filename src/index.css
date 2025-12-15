@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Damit das Layout nicht blockiert wird */
+body {
+  margin: 0;
+  padding: 0;
+}
