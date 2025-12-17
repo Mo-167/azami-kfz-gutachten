@@ -1,54 +1,30 @@
-import { PhoneCall, Mail, MapPin, Shield } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-footerBg text-gray-300 pt-16 pb-10 px-6">
-      <div className="max-w-7xl mx-auto">
+    <footer className="bg-heroBg text-white">
+      <div className="max-w-6xl mx-auto px-4 py-12">
 
-        {/* GRID: 4 SPALTEN */}
-        <div className="grid md:grid-cols-4 gap-12">
+        {/* Oberer Bereich */}
+        <div className="grid gap-8 md:grid-cols-4">
 
-          {/* SPALTE 1 – LOGO + TEXT + SOCIAL */}
+          {/* Firma */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <Shield className="text-iconBlue" size={26} />
-              <h3 className="text-white text-xl font-semibold">
-                KFZ-Gutachten Pro
-              </h3>
-            </div>
-
-            <p className="text-gray-400 text-sm leading-relaxed">
-              Ihr zertifizierter Partner für professionelle Kfz-Gutachten
-              bundesweit. Schnell, zuverlässig und anerkannt.
+            <h3 className="font-semibold text-lg mb-4">
+              Azami Kfz-Gutachten
+            </h3>
+            <p className="text-sm text-gray-300">
+              Unabhängige Kfz-Gutachten, Unfallanalysen und
+              Fahrzeugbewertungen – zuverlässig & transparent.
             </p>
-
-            {/* SOCIAL ICONS */}
-            <div className="flex gap-3 mt-5">
-              <a
-                href="#"
-                className="bg-[#1F2A3A] p-2 rounded-lg hover:bg-iconBlue transition"
-              >
-                <i className="fa-brands fa-facebook text-white"></i>
-              </a>
-              <a
-                href="#"
-                className="bg-[#1F2A3A] p-2 rounded-lg hover:bg-iconBlue transition"
-              >
-                <i className="fa-brands fa-twitter text-white"></i>
-              </a>
-              <a
-                href="#"
-                className="bg-[#1F2A3A] p-2 rounded-lg hover:bg-iconBlue transition"
-              >
-                <i className="fa-brands fa-linkedin-in text-white"></i>
-              </a>
-            </div>
           </div>
 
-          {/* SPALTE 2 – SERVICES */}
+          {/* Services */}
           <div>
-            <h4 className="text-white text-lg font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-sm">
+            <h3 className="font-semibold text-lg mb-4">
+              Services
+            </h3>
+            <ul className="space-y-2 text-sm text-gray-300">
               <li>Unfallgutachten</li>
               <li>Wertgutachten</li>
               <li>Gebrauchtwagencheck</li>
@@ -57,64 +33,70 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* SPALTE 3 – INFORMATIONEN */}
+          {/* Informationen */}
           <div>
-            <h4 className="text-white text-lg font-semibold mb-4">Informationen</h4>
-            <ul className="space-y-2 text-sm">
-              <li>Über uns</li>
-              <li>Zertifikate</li>
-              <li>Referenzen</li>
-              <li>FAQ</li>
-              <li>Blog</li>
+            <h3 className="font-semibold text-lg mb-4">
+              Informationen
+            </h3>
+            <ul className="space-y-2 text-sm text-gray-300">
+              <li>
+                <Link to="/ueber-uns" className="hover:text-iconBlue transition">
+                  Über uns
+                </Link>
+              </li>
+              <li>
+                <Link to="/zertifikate" className="hover:text-iconBlue transition">
+                  Zertifikate
+                </Link>
+              </li>
+              <li>
+                <Link to="/standorte" className="hover:text-iconBlue transition">
+                  Standorte
+                </Link>
+              </li>
+              <li>
+                <Link to="/faq" className="hover:text-iconBlue transition">
+                  FAQ
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* SPALTE 4 – KONTAKT */}
+          {/* Kontakt */}
           <div>
-            <h4 className="text-white text-lg font-semibold mb-4">Kontakt</h4>
+            <h3 className="font-semibold text-lg mb-4">
+              Kontakt
+            </h3>
+            <ul className="space-y-2 text-sm text-gray-300">
+              <li>Telefon: +49 176 41759351</li>
+              <li>E-Mail: info@azami-gutachten.de</li>
+              <li>Deutschlandweit mobil</li>
+            </ul>
+          </div>
 
-            {/* Telefon */}
-            <div className="flex gap-3 mb-4">
-              <PhoneCall className="text-iconBlue" size={20} />
-              <div>
-                <p className="text-sm text-white">+49 (0) 1521 234 5678</p>
-                <p className="text-xs text-gray-400">24/7 Hotline</p>
-              </div>
-            </div>
+        </div>
 
-            {/* Email */}
-            <div className="flex gap-3 mb-4">
-              <Mail className="text-iconBlue" size={20} />
-              <div>
-                <p className="text-sm text-white">info@azami-gutachten.de</p>
-              </div>
-            </div>
+        {/* Trennlinie */}
+        <div className="border-t border-white/10 mt-10 pt-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
+            <p>
+              © {new Date().getFullYear()} Azami Kfz-Gutachten. Alle Rechte vorbehalten.
+            </p>
 
-            {/* Adresse */}
-            <div className="flex gap-3">
-              <MapPin className="text-iconBlue" size={20} />
-              <div>
-                <p className="text-sm text-white">Hauptstraße 123</p>
-                <p className="text-sm text-white">12345 Berlin</p>
-              </div>
+            <div className="flex gap-4">
+              <Link to="/impressum" className="hover:text-iconBlue transition">
+                Impressum
+              </Link>
+              <Link to="/datenschutz" className="hover:text-iconBlue transition">
+                Datenschutz
+              </Link>
+              <Link to="/agb" className="hover:text-iconBlue transition">
+                AGB
+              </Link>
             </div>
           </div>
         </div>
 
-        {/* LINIE */}
-        <div className="border-t border-gray-700 mt-12 pt-6"></div>
-
-        {/* UNTERER BEREICH */}
-        <div className="flex flex-col md:flex-row justify-between text-sm text-gray-500 gap-4">
-          <p>© 2025 Azami KFZ-Gutachten. Alle Rechte vorbehalten.</p>
-
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition">Impressum</a>
-            <a href="#" className="hover:text-white transition">Datenschutz</a>
-            <a href="#" className="hover:text-white transition">AGB</a>
-            <a href="#" className="hover:text-white transition">Cookie-Einstellungen</a>
-          </div>
-        </div>
       </div>
     </footer>
   );
