@@ -2,8 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Damit das Layout nicht blockiert wird */
+html,
+body {
+  height: 100%;
+}
+
 body {
   margin: 0;
-  padding: 0;
+  display: block;          /* wichtig: kein flex-centering */
+  min-height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth; /* optional, nice UX */
+}
+
+#root {
+  min-height: 100%;
 }

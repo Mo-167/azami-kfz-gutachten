@@ -1,33 +1,23 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
+  const navigate = useNavigate();
+
+  const goToContact = () => {
+    navigate("/", { state: { scrollToContact: true } });
+  };
+
   return (
     <header className="bg-heroBg text-white">
-      <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-        {/* Logo / Name */}
-        <Link to="/" className="font-bold text-lg">
-          Azami Kfz-Gutachten
-        </Link>
+      <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between">
+        <span className="font-bold">Azami Kfz-Gutachten</span>
 
-        {/* Navigation */}
-        <nav className="flex gap-6 text-sm md:text-base">
-          <Link to="/" className="hover:text-iconBlue transition">
-            Startseite
-          </Link>
-          <Link to="/ueber-uns" className="hover:text-iconBlue transition">
-            Über uns
-          </Link>
-          <Link to="/zertifikate" className="hover:text-iconBlue transition">
-            Zertifikate
-          </Link>
-          <Link to="/faq" className="hover:text-iconBlue transition">
-            FAQ
-          </Link>
-
-          {/* Kontakt ist ein Abschnitt auf der Startseite */}
-          <a href="/#contact" className="hover:text-iconBlue transition">
-            Kontakt
-          </a>
+        <nav className="flex gap-6">
+          <button onClick={() => navigate("/")}>Startseite</button>
+          <button onClick={() => navigate("/ueber-uns")}>Über uns</button>
+          <button onClick={() => navigate("/standorte")}>Standorte</button>
+          <button onClick={() => navigate("/zertifikate")}>Zertifikate</button>
+          <button onClick={goToContact}>Kontakt</button>
         </nav>
       </div>
     </header>
