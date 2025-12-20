@@ -2,7 +2,7 @@ import { ArrowRight, PhoneCall } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="bg-heroBg py-20 px-4">
+    <section id="hero" className="pt-32 py-20 px-4 bg-heroBg scroll-mt-32">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
 
         {/* Textbereich */}
@@ -41,7 +41,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="tel:+4915792324981"
+              href="tel:+4917641759351"
               className="bg-white border border-gray-300 px-6 py-3 rounded-lg font-medium flex items-center gap-2 hover:bg-gray-100 transition text-heroBg"
             >
               <PhoneCall size={20} /> Anrufen
