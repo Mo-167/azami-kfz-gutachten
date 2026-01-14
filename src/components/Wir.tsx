@@ -11,29 +11,26 @@ export default function Wir() {
         </div>
 
         {/* Headline */}
-        <h2 className="text-3xl md:text-4xl font-bold text-heroBg leading-tight mb-6">
-          Ihr Kfz Gutachten in den Händen eines Ingenieurs
+        <h2 className="text-3xl md:text-4xl font-bold text-heroBg leading-tight mb-2">
+          Das Ingenieur- und Sachverständigenbüro Azami
         </h2>
+
+        <h1 className="text-1xl md:text-1xl font-bold text-heroBg leading-tight mb-6">
+            Zertifiziert · Unabhängig · Vor-Ort-Begutachtung · Rechtssicher für Versicherungen
+        </h1>
 
         {/* Text */}
         <div className="max-w-3xl text-gray-600 leading-relaxed space-y-5">
           <p>
-            Bei uns stehen Qualität und Fachkompetenz bei jedem Gutachten an
-            erster Stelle. Vertrauen Sie auf unsere langjährige Expertise im
-            Kfz-Bereich, bestätigt durch anerkannte Prüfstellen und regelmäßige
-            fachliche Weiterbildungen.
+            Bei uns ist Ihr Kfz-Gutachten in den Händen eines zertifizierten Ingenieurs und unabhängigen Kfz-Sachverständigen. Wir stehen für höchste fachliche Kompetenz, präzise Schadenbewertung und objektive Fahrzeugbegutachtung - damit Sie Ihre Ansprüche gegenüber der Versicherung vollständig und rechtssicher durchsetzen können.
           </p>
 
           <p>
-            Als unabhängiges Ingenieur- und Sachverständigenbüro begleiten wir
-            Sie professionell, transparent und zuverlässig – von der ersten
-            Kontaktaufnahme bis zur finalen Gutachtenerstellung.
+            Als unabhängiges Ingenieur- und Kfz-Sachverständigenbüro begleiten wir Sie zuverlässig von der ersten Kontaktaufnahme bis zur finalen Erstellung Ihres Unfallgutachtens. Unsere Arbeitsweise ist transparent, nachvollziehbar und konsequent auf Ihre Interessen ausgerichtet.
           </p>
 
           <p>
-            Unser erfahrenes Team aus Ingenieuren und Experten steht für höchste
-            Präzision, Objektivität und Verlässlichkeit bei der Bewertung und
-            Begutachtung von Fahrzeugschäden.
+            Unser erfahrenes Team aus Kfz-Gutachtern und Ingenieuren erstellt detaillierte Schadengutachten, ermittelt Reparaturkosten, Wertminderungen und Nutzungsausfall und sorgt für eine vollständige Dokumentation - die Grundlage für eine erfolgreiche Schadenregulierung.
           </p>
         </div>
 

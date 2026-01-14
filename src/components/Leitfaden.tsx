@@ -1,59 +1,104 @@
-import { Search } from "lucide-react";
+import { MapPin, SearchCheck, FileCheck } from "lucide-react";
 
 type Step = {
   number: string;
   title: string;
   text: string;
+  icon: React.ElementType;
 };
 
 function Leitfaden() {
   const steps: Step[] = [
     {
       number: "01",
-      title: "Standort mitteilen",
+      title: "Standort übermitteln",
       text:
-        "Teilen Sie uns den genauen Standort Ihres Fahrzeugs mit, damit wir die Begutachtung planen können. Dies ermöglicht uns, schnell und effizient einen Termin für Sie zu koordinieren.",
+        "Teilen Sie uns den Standort Ihres Fahrzeugs mit, damit wir schnell einen Termin für Ihr Kfz-Gutachten vereinbaren können. Unsere Kfz-Sachverständigen sind flexibel im Einsatz und kommen direkt zu Ihnen – egal ob Zuhause, am Arbeitsplatz oder in der Werkstatt.",
+      icon: MapPin,
     },
     {
       number: "02",
-      title: "Begutachtung vor Ort",
+      title: "Vor-Ort-Begutachtung",
       text:
-        "Unser Sachverständiger wird Ihr Fahrzeug vor Ort begutachten, um den Schaden präzise zu beurteilen. Dies gewährleistet eine genaue und gründliche Analyse aller relevanten Faktoren.",
+        "Ein erfahrener und unabhängiger Kfz-Gutachter begutachtet Ihr Fahrzeug fachgerecht vor Ort. Dabei wird der Unfallschaden detailliert erfasst, um eine präzise und rechtssichere Schadenbewertung zu gewährleisten.",
+      icon: SearchCheck,
     },
     {
       number: "03",
-      title: "Gutachten erhalten",
+      title: "Kfz-Gutachten erhalten",
       text:
-        "Nach der Begutachtung erhalten Sie ein ausführliches Kfz-Gutachten, das alle festgestellten Schäden und Bewertungen enthält. Das Gutachten dient als Grundlage für Ihre Versicherung.",
+        "Nach der Begutachtung erhalten Sie ein ausführliches Unfallgutachten inklusive aller Schäden, Reparaturkosten und Wertminderungen. Das Kfz-Gutachten dient als verlässliche Grundlage für die Abwicklung mit der Versicherung.",
+      icon: FileCheck,
     },
   ];
 
   return (
-    <section className="py-16 px-4 bg-white">
+    <section className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
-        <div className="bg-white rounded-[2.5rem] shadow-lg px-8 py-12 md:px-14 md:py-16">
-          <div className="grid gap-12 md:grid-cols-3">
-            {steps.map((step) => (
-              <div key={step.number}>
-                <div className="relative w-20 h-20">
-                  <div className="w-20 h-20 rounded-full bg-gray-100 shadow flex items-center justify-center">
-                    <Search size={32} className="text-gray-400" />
-                  </div>
-                  <span className="absolute inset-0 flex items-center justify-center font-bold text-red-500">
-                    {step.number}
-                  </span>
-                </div>
+        {/* Headline */}
+        <div
+          className="text-center mb-14"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-heroBg">
+            So läuft es ab
+          </h2>
+          <p className="mt-4 text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            In drei einfachen Schritten zum professionellen Kfz-Gutachten – schnell,
+            unabhängig und direkt bei Ihnen vor Ort.
+          </p>
+        </div>
 
-                <h3 className="mt-6 text-2xl font-bold text-gray-900">
-                  {step.title}
-                </h3>
-
-                <p className="mt-4 text-gray-600 leading-relaxed">
-                  {step.text}
-                </p>
+        {/* Cards */}
+        <div className="grid gap-10 md:grid-cols-3">
+          {steps.map((step, index) => (
+            <div
+              key={step.number}
+              data-aos="fade-up"
+              data-aos-delay={index * 150}
+              data-aos-duration="900"
+              className="
+                bg-white rounded-2xl shadow-lg px-8 py-12 text-center
+                transition-transform duration-300 ease-out
+                hover:scale-[1.03]
+                hover:shadow-xl
+              "
+            >
+              {/* Nummer */}
+              <div className="text-2xl font-extrabold text-iconBlue mb-4">
+                {step.number}
               </div>
-            ))}
-          </div>
+
+              {/* Icon */}
+              <div className="flex justify-center mb-6">
+                <div
+                  className="
+                    w-16 h-16 rounded-3xl bg-lightBlue
+                    flex items-center justify-center
+                    transition-transform duration-300 ease-out
+                    hover:scale-110
+                  "
+                >
+                  <step.icon
+                    size={34}
+                    className="text-heroBg"
+                    strokeWidth={1.6}
+                  />
+                </div>
+              </div>
+
+              {/* Titel */}
+              <h3 className="text-2xl font-bold text-heroBg mb-4">
+                {step.title}
+              </h3>
+
+              {/* Text */}
+              <p className="text-gray-600 leading-relaxed">
+                {step.text}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
