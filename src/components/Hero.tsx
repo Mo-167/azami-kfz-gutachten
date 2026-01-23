@@ -4,10 +4,8 @@ export default function Hero() {
   return (
     <section id="hero" className="pt-32 py-20 px-4 bg-heroBg scroll-mt-32">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-
         {/* Textbereich */}
         <div>
-
           {/* Testbox – kannst du später entfernen */}
           <div className="w-20 h-20 bg-heroBg mb-4"></div>
 
@@ -23,8 +21,8 @@ export default function Hero() {
             data-aos="fade-up"
             data-aos-delay="150"
           >
-            Unkompliziert. Transparent. Schnell.
-            Wir erstellen Unfall- und Wertgutachten für Ihr Fahrzeug – zuverlässig und unabhängig.
+            Unkompliziert. Transparent. Schnell. Wir erstellen Unfall- und
+            Wertgutachten für Ihr Fahrzeug – zuverlässig und unabhängig.
           </p>
 
           {/* Buttons */}
@@ -49,19 +47,20 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Bildbereich */}
-        <div
-          className="relative"
-          data-aos="fade-left"
-          data-aos-delay="200"
-        >
-          <img
-            src="/murtaza.jpg"
-            alt="Kfz Gutachten"
+        {/* Videobereich */}
+        <div className="relative" data-aos="fade-left" data-aos-delay="200">
+          <video
             className="w-full h-72 md:h-96 object-cover rounded-xl shadow-lg"
-          />
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            poster="/UeberUns-Murtaza.png"
+          >
+            <source src="/Hero-Clip.mp4" type="video/mp4" />
+          </video>
         </div>
-
       </div>
     </section>
   );

@@ -6,6 +6,8 @@ import Services from "../components/Services";
 import Examples from "../components/Examples";
 import Certificates from "../components/Certificates";
 import Contact from "../components/Contact";
+import Standorte from "../components/Standorte";
+
 
 
 export default function Home() {
@@ -29,6 +31,8 @@ export default function Home() {
 
       {/* 7) Zertifikate */}
       <Certificates />
+
+      <Standorte />
 
       {/* 8) Kontaktaufnahme */}
       <Contact />

@@ -2,7 +2,7 @@ import { Award, ShieldCheck, CheckCircle } from "lucide-react";
 
 export default function Certificates() {
   return (
-    <section id="certificates" className="py-20 px-4 bg-gray-100">
+    <section id="certificates" className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold text-gray-900">Zertifizierungen</h2>
         <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
