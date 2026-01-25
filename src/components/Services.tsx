@@ -4,42 +4,111 @@ export default function Services() {
   return (
     <section id="services" className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold text-gray-900">Unsere Leistungen</h2>
-        <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-          Als zertifizierter Kfz-Gutachter bieten wir Ihnen professionelle, unabhängige und schnelle Gutachten –
-          ganz ohne Kostenrisiko für Unfallgeschädigte.
+        {/* Headline */}
+        <h2
+          className="text-4xl font-bold text-gray-900"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
+          Unsere Leistungen
+        </h2>
+
+        <p
+          className="text-gray-600 mt-4 max-w-2xl mx-auto"
+          data-aos="fade-up"
+          data-aos-delay="150"
+          data-aos-duration="800"
+        >
+          Als zertifizierter Kfz-Gutachter bieten wir Ihnen professionelle,
+          unabhängige und schnelle Gutachten – ganz ohne Kostenrisiko für
+          Unfallgeschädigte.
         </p>
 
         {/* GRID */}
         <div className="grid md:grid-cols-3 gap-10 mt-16">
+          {/* LEISTUNG 1 – Haftpflicht Gutachten */}
+          <div
+            className="
+              p-8 rounded-xl shadow-lg bg-gray-50
+              transition-all duration-300 ease-out
+              hover:shadow-xl hover:-translate-y-1
+            "
+            data-aos="fade-up"
+            data-aos-delay="0"
+            data-aos-duration="900"
+          >
+            <img
+              src="/Service-Haftpflicht.png"
+              alt="Haftpflicht Gutachten"
+              className="mx-auto mb-6 h-45 object-contain rounded-2xl shadow-md"
+            />
 
-          {/* LEISTUNG 1 */}
-          <div className="p-8 rounded-xl shadow-lg bg-gray-50 hover:shadow-xl transition">
-            <FileCheck2 size={48} className="text-blue-600 mx-auto" />
-            <h3 className="text-2xl font-semibold mt-6">Unfallgutachten</h3>
+            <h3 className="flex items-center justify-center gap-3 text-2xl font-semibold text-heroBg">
+              <FileCheck2 size={28} className="text-blue-600" />
+              Haftpflicht Gutachten
+            </h3>
+
             <p className="text-gray-600 mt-3">
-              Detaillierte, unabhängige Gutachten nach einem Verkehrsunfall – für Versicherung, Werkstatt oder Anwalt.
+              Detaillierte, unabhängige Gutachten nach einem Verkehrsunfall – für
+              die Durchsetzung Ihrer Ansprüche gegenüber der gegnerischen
+              Versicherung.
             </p>
           </div>
 
-          {/* LEISTUNG 2 */}
-          <div className="p-8 rounded-xl shadow-lg bg-gray-50 hover:shadow-xl transition">
-            <CarFront size={48} className="text-blue-600 mx-auto" />
-            <h3 className="text-2xl font-semibold mt-6">Fahrzeugbewertung</h3>
-            <p className="text-gray-600 mt-3">
-              Professionelle Bewertung beim Kauf, Verkauf oder der Finanzierung Ihres Fahrzeugs.
+          {/* LEISTUNG 2 – Oldtimer Gutachten (Coming Soon) */}
+          <div
+            className="
+              p-8 rounded-xl shadow-md bg-gray-100
+              opacity-60 cursor-not-allowed
+            "
+            data-aos="fade-up"
+            data-aos-delay="150"
+            data-aos-duration="900"
+          >
+            <img
+              src="/Service-Oldtimer.png"
+              alt="Oldtimer Gutachten"
+              className="mx-auto mb-6 h-45 object-contain grayscale rounded-2xl shadow-md"
+            />
+
+            <h3 className="flex items-center justify-center gap-3 text-2xl font-semibold text-gray-500">
+              <ShieldCheck size={28} className="text-gray-400" />
+              Oldtimer Gutachten
+            </h3>
+
+            <p className="text-gray-500 mt-3">
+              Wert- und Zustandsbewertungen für Oldtimer und klassische Fahrzeuge
+              – in naher Zukunft verfügbar.
             </p>
           </div>
 
-          {/* LEISTUNG 3 */}
-          <div className="p-8 rounded-xl shadow-lg bg-gray-50 hover:shadow-xl transition">
-            <ShieldCheck size={48} className="text-blue-600 mx-auto" />
-            <h3 className="text-2xl font-semibold mt-6">Beweissicherung</h3>
+          {/* LEISTUNG 3 – Fahrzeugbewertung */}
+          <div
+            className="
+              p-8 rounded-xl shadow-lg bg-gray-50
+              transition-all duration-300 ease-out
+              hover:shadow-xl hover:-translate-y-1
+            "
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="900"
+          >
+            <img
+              src="/Service-Fahrzeugbewertung.png"
+              alt="Fahrzeugbewertung"
+              className="mx-auto mb-6 h-45 object-contain rounded-2xl shadow-md"
+            />
+
+            <h3 className="flex items-center justify-center gap-3 text-2xl font-semibold text-heroBg">
+              <CarFront size={28} className="text-blue-600" />
+              Fahrzeugbewertung
+            </h3>
+
             <p className="text-gray-600 mt-3">
-              Dokumentation von Schäden und Mängeln – ideal für Rechtsstreitigkeiten und Versicherungsfälle.
+              Professionelle Bewertung beim Kauf, Verkauf oder der Finanzierung
+              Ihres Fahrzeugs – objektiv und marktgerecht.
             </p>
           </div>
-
         </div>
       </div>
     </section>
