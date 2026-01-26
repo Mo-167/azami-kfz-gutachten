@@ -93,6 +93,16 @@ export default function Footer() {
               <Link to="/agb" className="hover:text-iconBlue transition">
                 AGB
               </Link>
+
+              {/* Cookie Einstellungen */}
+              <button
+                onClick={() =>
+                  window.dispatchEvent(new Event("open-cookie-settings"))
+                }
+                className="hover:text-iconBlue transition underline"
+              >
+                Cookie-Einstellungen
+              </button>
             </div>
           </div>
         </div>

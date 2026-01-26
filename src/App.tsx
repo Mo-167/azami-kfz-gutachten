@@ -9,26 +9,30 @@ import UeberUns from "./pages/UeberUns";
 import Zertifikate from "./pages/Zertifikate";
 import FAQ from "./pages/FAQ";
 import Standorte from "./pages/Standorte";
-
-
+import CookieBanner from "./components/CookieBanner";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        {/* Layout-Wrapper */}
-        <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/ueber-uns" element={<UeberUns />} />
-          <Route path="/zertifikate" element={<Zertifikate />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/datenschutz" element={<Datenschutz />} />
-          <Route path="/impressum" element={<Impressum />} />
-          <Route path="/agb" element={<AGB />} />
-          <Route path="/standorte" element={<Standorte />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <>
+      {/* Cookie Banner global */}
+      <CookieBanner />
+
+      <BrowserRouter>
+        <Routes>
+          {/* Layout-Wrapper */}
+          <Route element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/ueber-uns" element={<UeberUns />} />
+            <Route path="/zertifikate" element={<Zertifikate />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/datenschutz" element={<Datenschutz />} />
+            <Route path="/impressum" element={<Impressum />} />
+            <Route path="/agb" element={<AGB />} />
+            <Route path="/standorte" element={<Standorte />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

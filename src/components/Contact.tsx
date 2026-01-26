@@ -15,7 +15,7 @@ export default function Contact() {
           </p>
         </div>
 
-        {/* Hauptbereich: links Kontaktkarte, rechts Formular */}
+        {/* Hauptbereich */}
         <div className="mt-12 grid gap-8 md:grid-cols-2 items-stretch">
           {/* Linke Kontaktkarte */}
           <div
@@ -25,11 +25,8 @@ export default function Contact() {
             <h3 className="text-2xl font-semibold">Direkter Kontakt</h3>
 
             <div className="space-y-5 text-sm md:text-base">
-              {/* Telefon */}
               <div className="flex gap-4">
-                <div className="mt-1">
-                  <PhoneCall className="text-iconBlue" />
-                </div>
+                <PhoneCall className="text-iconBlue mt-1" />
                 <div>
                   <p className="font-semibold">Telefon</p>
                   <p className="text-gray-200">+49 176 41759351</p>
@@ -38,46 +35,35 @@ export default function Contact() {
                   </p>
                 </div>
               </div>
-    
-              {/* E-Mail */}
+
               <div className="flex gap-4">
-                <div className="mt-1">
-                  <Mail className="text-iconBlue" />
-                </div>
+                <Mail className="text-iconBlue mt-1" />
                 <div>
                   <p className="font-semibold">E-Mail</p>
                   <p className="text-gray-200">info@azami-gutachten.de</p>
                   <p className="text-xs text-gray-400 mt-1">
-                    Antwort in der Regel innerhalb von 2&nbsp;Stunden
+                    Antwort in der Regel innerhalb von 2 Stunden
                   </p>
                 </div>
               </div>
 
-              {/* Standort */}
               <div className="flex gap-4">
-                <div className="mt-1">
-                  <MapPin className="text-iconBlue" />
-                </div>
+                <MapPin className="text-iconBlue mt-1" />
                 <div>
                   <p className="font-semibold">Standort</p>
-                  <p className="text-gray-200">
-                    München &amp; Hannover
-                  </p>
+                  <p className="text-gray-200">München &amp; Hannover</p>
                   <p className="text-xs text-gray-400 mt-1">
                     Mobil im gesamten Umkreis verfügbar
                   </p>
                 </div>
               </div>
 
-              {/* Öffnungszeiten */}
               <div className="flex gap-4">
-                <div className="mt-1">
-                  <Clock3 className="text-iconBlue" />
-                </div>
+                <Clock3 className="text-iconBlue mt-1" />
                 <div>
                   <p className="font-semibold">Öffnungszeiten</p>
                   <p className="text-gray-200">Mo–Fr: 08:00 – 22:00 Uhr</p>
-                  <p className="text-gray-200">Sa-So: 09:00 – 20:00 Uhr</p>
+                  <p className="text-gray-200">Sa–So: 09:00 – 20:00 Uhr</p>
                   <p className="text-xs text-gray-400 mt-1">
                     Notfälle: nach Vereinbarung
                   </p>
@@ -86,7 +72,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Rechte Formular-Karte */}
+          {/* Formular */}
           <div
             className="bg-white rounded-2xl p-8 md:p-10 shadow-lg"
             data-aos="fade-left"
@@ -99,120 +85,124 @@ export default function Contact() {
               action="https://formspree.io/f/xpwvnjzz"
               method="POST"
               className="space-y-5"
->
-          {/* Vorname / Nachname */}
-          <div className="grid md:grid-cols-2 gap-4">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Vorname *
-              </label>
-              <input
-                type="text"
-                name="Vorname"
-                placeholder="Ihr Vorname"
-                required
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-iconBlue"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Nachname *
-              </label>
-              <input
-                type="text"
-                name="Nachname"
-                placeholder="Ihr Nachname"
-                required
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-iconBlue"
-              />
-            </div>
-          </div>
-
-          {/* E-Mail / Telefon */}
-          <div className="grid md:grid-cols-2 gap-4">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                E-Mail *
-              </label>
-              <input
-                type="email"
-                name="Email"
-                placeholder="Ihre E-Mail-Adresse"
-                required
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-iconBlue"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Telefon *
-              </label>
-              <input
-                type="tel"
-                name="Telefon"
-                placeholder="Ihre Telefonnummer"
-                required
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-iconBlue"
-              />
-            </div>
-          </div>
-
-          {/* Art des Gutachtens */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Art des Gutachtens *
-            </label>
-            <select
-              name="Gutachten"
-              required
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 bg-white focus:ring-2 focus:ring-iconBlue"
             >
-              <option value="Unfallgutachten">Unfallgutachten</option>
-              <option value="Wertgutachten">Wertgutachten</option>
-              <option value="Schadengutachten">Schadengutachten</option>
-              <option value="Sonstiges">Sonstiges</option>
-            </select>
-          </div>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Vorname *
+                  </label>
+                  <input
+                    type="text"
+                    name="Vorname"
+                    required
+                    className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-iconBlue"
+                  />
+                </div>
 
-          {/* Nachricht */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Nachricht *
-            </label>
-            <textarea
-              name="Message"
-              placeholder="Bitte beschreiben Sie kurz Ihr Anliegen..."
-              required
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 h-28 resize-none focus:ring-2 focus:ring-iconBlue"
-            />
-          </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Nachname *
+                  </label>
+                  <input
+                    type="text"
+                    name="Nachname"
+                    required
+                    className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-iconBlue"
+                  />
+                </div>
+              </div>
 
-          {/* Datenschutz */}
-          <div className="flex items-start gap-2 text-sm text-gray-600">
-            <input type="checkbox" required />
-            <span>
-              Ich stimme der Verarbeitung meiner Daten gemäß der Datenschutzerklärung zu.
-            </span>
-          </div>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    E-Mail *
+                  </label>
+                  <input
+                    type="email"
+                    name="Email"
+                    required
+                    className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-iconBlue"
+                  />
+                </div>
 
-          {/* Button */}
-          <button
-            type="submit"
-            className="w-full bg-iconBlue text-white font-semibold py-3 rounded-lg hover:bg-heroBg transition"
-          >
-            Anfrage absenden
-          </button>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Telefon *
+                  </label>
+                  <input
+                    type="tel"
+                    name="Telefon"
+                    required
+                    className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-iconBlue"
+                  />
+                </div>
+              </div>
 
-          <p className="text-xs text-gray-500 text-center">
-            * Pflichtfelder – Wir melden uns in der Regel innerhalb von 2 Stunden.
-          </p>
-        </form>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Art des Gutachtens *
+                </label>
+                <select
+                  name="Gutachten"
+                  required
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2 bg-white focus:ring-2 focus:ring-iconBlue"
+                >
+                  <option>Unfallgutachten</option>
+                  <option>Wertgutachten</option>
+                  <option>Schadengutachten</option>
+                  <option>Sonstiges</option>
+                </select>
+              </div>
 
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Nachricht *
+                </label>
+                <textarea
+                  name="Message"
+                  required
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2 h-28 resize-none focus:ring-2 focus:ring-iconBlue"
+                />
+              </div>
+
+              {/* DSGVO Checkbox */}
+              <div className="flex items-start gap-3 text-sm text-gray-600">
+                <input
+                  type="checkbox"
+                  name="datenschutz"
+                  required
+                  className="mt-1 accent-heroBg"
+                />
+                <span>
+                  Ich habe die{" "}
+                  <a
+                    href="/datenschutz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-heroBg underline font-medium"
+                  >
+                    Datenschutzerklärung
+                  </a>{" "}
+                  gelesen und stimme der Verarbeitung meiner personenbezogenen
+                  Daten zur Bearbeitung meiner Anfrage zu.
+                </span>
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-iconBlue text-white font-semibold py-3 rounded-lg hover:bg-heroBg transition"
+              >
+                Anfrage absenden
+              </button>
+
+              <p className="text-xs text-gray-500 text-center">
+                * Pflichtfelder – Wir melden uns in der Regel innerhalb von 2 Stunden.
+              </p>
+            </form>
           </div>
         </div>
 
-        {/* Hinweis-Box unten */}
+        {/* Hinweisbox */}
         <div
           className="mt-10 bg-lightBlue rounded-2xl p-6 md:p-8 shadow-sm"
           data-aos="fade-up"
@@ -227,7 +217,7 @@ export default function Contact() {
           <ul className="mt-4 space-y-2 text-sm md:text-base text-gray-700 list-disc list-inside">
             <li>Kostenlose Erstberatung für Unfallgeschädigte</li>
             <li>Direktabrechnung mit Versicherungen möglich</li>
-            <li>Vor-Ort-Termine in der Regel innerhalb von 24&nbsp;Stunden</li>
+            <li>Vor-Ort-Termine in der Regel innerhalb von 24 Stunden</li>
             <li>Gutachten in deutscher und englischer Sprache möglich</li>
           </ul>
         </div>
