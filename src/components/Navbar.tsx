@@ -162,11 +162,16 @@ export default function Navbar() {
           <button
             onClick={goToHero}
             type="button"
-            className="text-heroBg font-semibold"
             aria-label="Zur Startseite"
+            className="flex items-center"
           >
-            Azami
+            <img
+              src="/logo_nabbar_md.png"
+              alt="Azami Kfz-Gutachten Logo"
+              className="h-8 w-auto object-contain"
+            />
           </button>
+
 
           <button
             onClick={() => setMobileOpen((v) => !v)}
