@@ -190,7 +190,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full bg-iconBlue text-white font-semibold py-3 rounded-lg hover:bg-heroBg transition"
+                className="w-full bg-heroBg text-white font-semibold py-3 rounded-lg hover:bg-heroBg transition"
               >
                 Anfrage absenden
               </button>

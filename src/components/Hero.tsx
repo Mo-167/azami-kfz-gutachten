@@ -58,12 +58,11 @@ export default function Hero() {
               <PhoneCall size={20} /> Anrufen
             </a>
           </div>
-          
+
           {/* 24/7 Hinweis */}
           <div
             className="mt-4 flex items-center gap-2 text-sm text-gray-300"
-            data-aos="fade-up"
-            data-aos-delay="400"
+
           >
             <Clock3 size={16} className="text-lightBlue" />
             <span>
