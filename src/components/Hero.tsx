@@ -1,19 +1,32 @@
-import { ArrowRight, PhoneCall } from "lucide-react";
+import { ArrowRight, PhoneCall, Clock3 } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section id="hero" className="pt-6 py-10 md:pt-32 md:py-16 px-4 bg-heroBg scroll-mt-32">
+    <section
+      id="hero"
+      className="pt-32 py-10 md:pt-32 md:py-16 px-4 bg-heroBg scroll-mt-32"
+    >
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 md:gap-10 items-center">
         {/* Textbereich */}
         <div>
-          {/* Testbox – kannst du später entfernen */}
-          <div className="w-20 h-20 bg-heroBg mb-4"></div>
+          {/* Logo – NUR Desktop */}
+          <div
+            className="hidden md:block mb-6"
+            data-aos="fade-down"
+            data-aos-delay="100"
+          >
+            <img
+              src="/Logo_weiß.png"
+              alt="Azami Kfz-Gutachten Logo"
+              className="h-32 w-auto object-contain"
+            />
+          </div>
 
           <h1
-            className="text-4xl md:text-6xl font-bold text-white leading-tight"
+            className="text-4xl md:text-4xl font-bold text-white leading-tight"
             data-aos="fade-up"
           >
-            Kfz-Gutachten <br /> vom Experten
+            Kfz-Gutachten vom Experten
           </h1>
 
           <p
@@ -45,7 +58,24 @@ export default function Hero() {
               <PhoneCall size={20} /> Anrufen
             </a>
           </div>
+          
+          {/* 24/7 Hinweis */}
+          <div
+            className="mt-4 flex items-center gap-2 text-sm text-gray-300"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <Clock3 size={16} className="text-lightBlue" />
+            <span>
+              <strong className="text-white">24/7 erreichbar</strong> – auch an Wochenenden
+              & Feiertagen
+            </span>
+          </div>
+
+
         </div>
+
+
 
         {/* Videobereich */}
         <div className="relative" data-aos="fade-left" data-aos-delay="200">

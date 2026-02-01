@@ -9,6 +9,9 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  const isHome = location.pathname === "/";
+  const heroMode = isHome && !scrolled; // ✅ „verzahnt“: oben im Hero transparent
+
   const isActive = (path: string) => {
     if (path === "/") return location.pathname === "/";
     return location.pathname.startsWith(path);
@@ -25,7 +28,6 @@ export default function Navbar() {
         el.scrollIntoView({ behavior: "smooth", block: "start" });
         return;
       }
-
       attempts++;
       if (attempts < maxAttempts) requestAnimationFrame(tryScroll);
     };
@@ -71,7 +73,7 @@ export default function Navbar() {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
 
-  // Desktop Navbar: beim Scrollen nur in der BREITE schrumpfen + transparenter
+  // Scroll-Status
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     onScroll();
@@ -79,25 +81,41 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // ✅ Alte Größe aus deinem alten Code: px-6 py-3 (Desktop)
-  // ✅ Beim Scrollen: NUR px kleiner, Höhe bleibt gleich (py-3 bleibt)
+  // ✅ Desktop Navbar: oben im Hero „glassy“ + ohne Schatten, beim Scrollen kleiner & „weiß“
   const desktopNavClass = [
-    "hidden md:block backdrop-blur-md shadow-lg rounded-full transition-all duration-300 ease-out",
-    scrolled ? "bg-white/70 px-4 py-3" : "bg-white/90 px-6 py-3",
+    "hidden md:block rounded-full transition-all duration-300 ease-out backdrop-blur-md",
+    heroMode
+      ? "bg-white/10 border border-white/20 shadow-none px-6 py-3"
+      : scrolled
+      ? "bg-white/75 shadow-lg px-4 py-3"
+      : "bg-white/90 shadow-lg px-6 py-3",
   ].join(" ");
+
+  const desktopUlClass = [
+    "flex items-center gap-2 text-sm font-medium transition-colors duration-300",
+    heroMode ? "text-white" : "text-heroBg",
+  ].join(" ");
+
+  const pillBase = "px-4 py-2 rounded-full transition";
+
+  const pillInactive = heroMode
+    ? "hover:bg-white/15"
+    : "hover:bg-lightBlue";
+
+  const pillActive = heroMode
+    ? "bg-white/20 text-white"
+    : "bg-heroBg text-white";
 
   return (
     <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-1.5rem)] md:w-auto max-w-6xl">
-      {/* DESKTOP NAVBAR (alte Größe) */}
+      {/* DESKTOP NAVBAR */}
       <nav className={desktopNavClass}>
-        <ul className="flex items-center gap-2 text-sm font-medium text-heroBg">
+        <ul className={desktopUlClass}>
           {/* Startseite -> immer zum Hero */}
           <li>
             <button
               onClick={goToHero}
-              className={`px-4 py-2 rounded-full transition ${
-                isActive("/") ? "bg-heroBg text-white" : "hover:bg-lightBlue"
-              }`}
+              className={`${pillBase} ${isActive("/") ? pillActive : pillInactive}`}
               type="button"
             >
               Startseite
@@ -107,10 +125,8 @@ export default function Navbar() {
           <li>
             <Link
               to="/ueber-uns"
-              className={`px-4 py-2 rounded-full transition ${
-                isActive("/ueber-uns")
-                  ? "bg-heroBg text-white"
-                  : "hover:bg-lightBlue"
+              className={`${pillBase} ${
+                isActive("/ueber-uns") ? pillActive : pillInactive
               }`}
             >
               Über uns
@@ -120,10 +136,8 @@ export default function Navbar() {
           <li>
             <Link
               to="/standorte"
-              className={`px-4 py-2 rounded-full transition ${
-                isActive("/standorte")
-                  ? "bg-heroBg text-white"
-                  : "hover:bg-lightBlue"
+              className={`${pillBase} ${
+                isActive("/standorte") ? pillActive : pillInactive
               }`}
             >
               Standorte
@@ -133,10 +147,8 @@ export default function Navbar() {
           <li>
             <Link
               to="/zertifikate"
-              className={`px-4 py-2 rounded-full transition ${
-                isActive("/zertifikate")
-                  ? "bg-heroBg text-white"
-                  : "hover:bg-lightBlue"
+              className={`${pillBase} ${
+                isActive("/zertifikate") ? pillActive : pillInactive
               }`}
             >
               Zertifikate
@@ -147,7 +159,7 @@ export default function Navbar() {
           <li>
             <button
               onClick={goToContact}
-              className="px-4 py-2 rounded-full transition hover:bg-lightBlue"
+              className={`${pillBase} ${pillInactive}`}
               type="button"
             >
               Kontakt
@@ -159,6 +171,7 @@ export default function Navbar() {
       {/* MOBILE NAVBAR */}
       <nav className="md:hidden bg-white/90 backdrop-blur-md shadow-lg rounded-2xl px-4 py-3">
         <div className="flex items-center justify-between">
+          {/* Logo statt Text */}
           <button
             onClick={goToHero}
             type="button"
@@ -166,12 +179,11 @@ export default function Navbar() {
             className="flex items-center"
           >
             <img
-              src="/Logo.png"
+              src="/Logo_schwarz.png"
               alt="Azami Kfz-Gutachten Logo"
-              className="h-12 w-auto object-contain"
+              className="h-8 w-auto object-contain"
             />
           </button>
-
 
           <button
             onClick={() => setMobileOpen((v) => !v)}
