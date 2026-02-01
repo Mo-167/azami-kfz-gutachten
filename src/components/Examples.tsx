@@ -10,7 +10,7 @@ export default function Examples() {
   ];
 
   return (
-    <section id="examples" className="py-20 px-4 bg-gray-100">
+    <section id="examples" className="pt-10 py-10 md:pt-16 md:py-16 px-4 bg-gray-100">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold text-gray-900">Beispielgutachten & Arbeiten</h2>
         <p className="text-gray-600 mt-4 max-w-2xl mx-auto">

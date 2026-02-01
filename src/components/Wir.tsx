@@ -1,10 +1,10 @@
 export default function Wir() {
   return (
-    <section className="py-20 px-4 bg-gray-100">
+    <section className="pt-10 py-10 md:pt-16 md:py-16 px-4 bg-gray-100">
       <div className="max-w-6xl mx-auto">
         {/* Übergeordnete Headline (zentriert über beide Bereiche) */}
         <div
-          className="text-center mb-14"
+          className="text-center mb-10 md:mb-14"
           data-aos="fade-up"
           data-aos-duration="800"
         >
@@ -24,7 +24,7 @@ export default function Wir() {
         </div>
 
         {/* Inhalt: 2 Spalten */}
-        <div className="grid gap-14 md:grid-cols-2 items-center">
+        <div className="grid gap-6 md:gap-10 md:grid-cols-2 items-center">
           {/* Linke Seite – Text */}
           <div
             data-aos="fade-right"
@@ -60,7 +60,7 @@ export default function Wir() {
 
             {/* Button */}
             <div
-              className="mt-10"
+              className="mt-8 md:mt-10"
               data-aos="zoom-in"
               data-aos-delay="250"
               data-aos-duration="800"
@@ -84,7 +84,7 @@ export default function Wir() {
             <img
               src="/UeberUns-Murtaza.png"
               alt="Ingenieur- und Sachverständigenbüro Azami – Murtaza Azami"
-              className="w-full max-w-[300px] h-auto rounded-2xl shadow-lg"
+              className="w-full max-w-[280px] md:max-w-[300px] h-auto rounded-2xl shadow-lg"
             />
           </div>
         </div>

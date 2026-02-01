@@ -1,6 +1,6 @@
 export default function Zertifikate() {
   return (
-    <div className="max-w-4xl mx-auto py-20 px-4">
+    <div className="pt-32 py-10 md:pt-32 md:py-16 px-4 bg-white">
       <h1 className="text-3xl font-bold text-heroBg mb-6">
         Zertifikate & Qualifikationen
       </h1>

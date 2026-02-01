@@ -1,6 +1,6 @@
 export default function FAQ() {
   return (
-    <div className="max-w-4xl mx-auto py-20 px-4">
+    <div className="pt-32 py-10 md:pt-32 md:py-16 px-4 bg-white">
       <h1 className="text-3xl font-bold text-heroBg mb-8">
         Häufige Fragen (FAQ)
       </h1>
@@ -21,7 +21,7 @@ export default function FAQ() {
             Wie schnell erhalte ich mein Gutachten?
           </h3>
           <p className="mt-2">
-            In den meisten Fällen innerhalb von 24 bis 48 Stunden nach der
+            In den meisten Fällen innerhalb von 5 Arbeitstagen nach der
             Besichtigung.
           </p>
         </div>

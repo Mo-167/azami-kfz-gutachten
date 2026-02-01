@@ -2,8 +2,8 @@ import { ArrowRight, PhoneCall } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section id="hero" className="pt-32 py-20 px-4 bg-heroBg scroll-mt-32">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    <section id="hero" className="pt-6 py-10 md:pt-32 md:py-16 px-4 bg-heroBg scroll-mt-32">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 md:gap-10 items-center">
         {/* Textbereich */}
         <div>
           {/* Testbox – kannst du später entfernen */}

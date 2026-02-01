@@ -2,7 +2,7 @@ import { PhoneCall, Mail, MapPin, Clock3, Info } from "lucide-react";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 px-4 bg-sectionBg">
+    <section id="contact" className="pt-10 py-10 md:pt-16 md:py-16 px-4 bg-sectionBg">
       <div className="max-w-6xl mx-auto">
         {/* Überschrift */}
         <div className="text-center">

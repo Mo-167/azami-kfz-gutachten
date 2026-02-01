@@ -17,7 +17,7 @@ export default function Standorte() {
   ];
 
   return (
-    <section className="py-20 px-4 bg-gray-100">
+    <section className="pt-10 py-10 md:pt-16 md:py-16 px-4 bg-gray-100">
       <div className="max-w-6xl mx-auto">
         {/* Headline */}
         <div

@@ -2,7 +2,7 @@ import { GraduationCap, Car, Zap } from "lucide-react";
 
 export default function Certificates() {
   return (
-    <section id="certificates" className="py-20 px-4 bg-white">
+    <section id="certificates" className="pt-10 py-10 md:pt-16 md:py-16 px-4 bg-white">
       <div className="max-w-6xl mx-auto text-center">
         {/* Headline */}
         <h2

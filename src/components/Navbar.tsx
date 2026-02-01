@@ -166,7 +166,7 @@ export default function Navbar() {
             className="flex items-center"
           >
             <img
-              src="/logo_nabbar_md.png"
+              src="/Logo.png"
               alt="Azami Kfz-Gutachten Logo"
               className="h-12 w-auto object-contain"
             />

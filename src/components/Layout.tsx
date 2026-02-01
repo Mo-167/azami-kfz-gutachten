@@ -10,7 +10,7 @@ export default function Layout() {
       {/* 🔹 Platzhalter für späteres Logo */}
       {/* 
       <div className="flex justify-center py-6">
-        <img src="/logo.svg" alt="Azami Kfz-Gutachten Logo" className="h-16" />
+        <img src="/logo_navbar_md.png" alt="Azami Kfz-Gutachten Logo" className="h-16" />
       </div>
       */}
 
