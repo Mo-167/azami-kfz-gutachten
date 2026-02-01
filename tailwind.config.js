@@ -9,6 +9,7 @@ export default {
         sectionBg: "#ECF2F4",     // Services & Examples
         lightBlue: "#F0F7FE",     // zarte Akzentfarbe
         iconBlue: "#43748B",      // Iconfarbe
+        tuerkisBlue: "5CE1E6",    // Türkis Reifen
       },
     },
   },
