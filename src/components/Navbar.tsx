@@ -73,7 +73,7 @@ export default function Navbar() {
   return (
     <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-1.5rem)] max-w-6xl">
       {/* DESKTOP NAVBAR */}
-      <nav className="hidden md:block bg-white/90 backdrop-blur-md shadow-lg rounded-full px-6 py-3">
+      <nav className="hidden md:block bg-white/90 backdrop-blur-md shadow-lg rounded-full px-5 py-2">
         <ul className="flex items-center justify-center gap-2 text-sm font-medium text-heroBg">
           <li>
             <button
@@ -139,7 +139,7 @@ export default function Navbar() {
       </nav>
 
       {/* MOBILE NAVBAR */}
-      <nav className="md:hidden bg-white/90 backdrop-blur-md shadow-lg rounded-2xl px-4 py-3">
+      <nav className="md:hidden bg-white/90 backdrop-blur-md shadow-lg rounded-full px-4 py-3">
         <div className="flex items-center justify-between">
           {/* "Logo" / Brand */}
           <button
