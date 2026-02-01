@@ -168,7 +168,7 @@ export default function Navbar() {
             <img
               src="/logo_nabbar_md.png"
               alt="Azami Kfz-Gutachten Logo"
-              className="h-10 w-auto object-contain"
+              className="h-12 w-auto object-contain"
             />
           </button>
 
